@@ -14,10 +14,10 @@ export default function MovieCard({
     : `https://via.placeholder.com/`;
 
   return (
-    <div className="rounded shadow p-4">
-      <img src={imageURL} alt={title} className="w-full h-64 rounded mb-4" />
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
-      <p className="text-gray-700 text-base">{overview}</p>
+    <div className="p-4 rounded shadow">
+      <img src={imageURL} alt={title} className="w-full h-64 mb-4 rounded" />
+      <h2 className="mb-2 text-xl font-bold">{title}</h2>
+      <p className="text-base text-gray-700">{overview}</p>
     </div>
   );
 }

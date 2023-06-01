@@ -1,30 +1,32 @@
 "use client";
 
 import React, { useState } from "react";
-import { getMovie } from "@/services/movie.service";
+import { searchMovies } from "@/services/movie.service";
 
 import MovieCard from "./MovieCard";
 import SearchBar from "./SearchBar";
 
 const MovieSearch = () => {
-  const [movie, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   const handleSearch = async (query: string) => {
-    const data = await getMovie(query);
-    setMovies(data.results);
+    const result = await searchMovies(query);
+    setMovies(result);
   }; // End handleSearch
+
+  console.log(`Ryan Here: In App \n `, { movies });
 
   return (
     <div>
       <SearchBar onSearch={handleSearch} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {movie.map((movie: any) => (
+        {movies.map((movie: any) => (
           <MovieCard
             key={movie.id}
             title={movie.title}
             overview={movie.overview}
-            posterPath={movie.posterPath}
+            posterPath={movie.poster_path}
           />
         ))}
       </div>

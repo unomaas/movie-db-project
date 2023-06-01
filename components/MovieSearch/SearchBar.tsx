@@ -13,6 +13,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
   const [query, setQuery] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    console.log(`Ryan Here: \n `, { e });
     e.preventDefault();
     onSearch(query);
   }; // End handleSubmit
@@ -30,9 +31,11 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           setQuery(e.target.value)
         }
+        data-te-ripple-init
+        data-te-ripple-color="light"
       />
 
-      <Button type="submit" className="h-10 ml-2">
+      <Button type="submit" className="ml-2">
         Search
       </Button>
     </form>
