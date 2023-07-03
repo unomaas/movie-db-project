@@ -14,7 +14,6 @@ const MovieSearch = () => {
     setMovies(result);
   }; // End handleSearch
 
-  console.log(`Ryan Here: In App \n `, { movies });
 
   return (
     <div>

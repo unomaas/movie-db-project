@@ -4,6 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { buttonVariants } from "@/components/ui/button";
 import MovieSearch from "@/components/MovieSearch/MovieSearch";
+import SearchBar from "@/components/MovieSearch/SearchBar";
 
 export default function IndexPage() {
   return (

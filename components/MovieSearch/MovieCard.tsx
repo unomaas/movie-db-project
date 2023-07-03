@@ -15,7 +15,7 @@ export default function MovieCard({
 
   return (
     <div className="p-4 rounded shadow">
-      <img src={imageURL} alt={title} className="w-full h-64 mb-4 rounded" />
+      <img src={imageURL} alt={title} className="w-full mb-4 rounded" />
       <h2 className="mb-2 text-xl font-bold">{title}</h2>
       <p className="text-base text-gray-700">{overview}</p>
     </div>
