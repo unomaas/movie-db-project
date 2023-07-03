@@ -27,4 +27,4 @@ export default function IndexPage() {
       </main>
     </div>
   );
-}
+} // End IndexPage

@@ -37,4 +37,4 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
       </Button>
     </form>
   );
-}
+} // End SearchBar
