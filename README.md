@@ -7,13 +7,13 @@ Display the first 20 results matching the search query.
 Each movie result includes an image, title, and description.
 
 
-### Technologies Used
+## Technologies Used
 React
 TypeScript
 Movie Database API
 
 
-### Getting Started
+## Getting Started
 To run this application locally, follow these steps:
 
 1. Clone the repository:
@@ -40,13 +40,13 @@ npm run dev
 
 6. Open your browser and visit http://localhost:3000 to see the application.
 
-### Configuration
+## Configuration
 The application requires a Movie Database API key to fetch movie data. You can obtain an API key by creating an account on the [Movie Database website](https://developer.themoviedb.org/reference/intro/getting-started) and following their API documentation.
 
-### License
+## License
 This project is licensed under the MIT License.
 
 Feel free to customize and use this application for your own purposes.
 
-### Acknowledgements
+## Acknowledgements
 This application was built using React and TypeScript, styled with Tailwind and shadcn/ui.  It relies on the Movie Database API for movie data.  Special thanks to the developers and contributors of these technologies and APIs.
