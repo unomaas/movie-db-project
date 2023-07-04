@@ -6,25 +6,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 interface SearchBarProps {
-  onSearch: (query: string) => void;
+  handleSearch: (query: string, page: number) => void;
+  query: string;
+  setQuery: (query: string) => void;
 } // End SearchBarProps
 
-export default function SearchBar({ onSearch }: SearchBarProps) {
-  const [query, setQuery] = useState("");
-
+export default function SearchBar({
+  handleSearch,
+  query,
+  setQuery,
+}: SearchBarProps) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onSearch(query);
+    handleSearch(query, 1);
   }; // End handleSubmit
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto mt-10 flex w-screen max-w-lg items-center"
+      className="flex items-center w-screen max-w-lg p-4 mx-auto mt-10"
     >
       <Input
         type="text"
-        className="h-10 w-full rounded-md border border-transparent bg-gray-200 px-4 py-2 text-lg text-gray-700 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600"
+        className="w-full h-10 px-4 py-2 text-lg text-gray-700 bg-gray-200 border border-transparent rounded-md focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600"
         placeholder="Search for a movie"
         value={query}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>

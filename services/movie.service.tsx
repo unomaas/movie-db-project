@@ -8,13 +8,11 @@ const client = axios.create({
   params: { api_key: movieKey },
 }); // End client
 
-export const searchMovies = async (query: string) => {
+export const searchMovies = async (query: string, page: number = 1) => {
   try {
     const { data } = await client.get(`/search/movie`, {
-      params: { query },
+      params: { query, page },
     }); // End data
-
-    console.log(`Ryan Here: searchMovies \n `, { data });
 
     return data;
   } catch (error) {
