@@ -14,7 +14,9 @@ export const searchMovies = async (query: string) => {
       params: { query },
     }); // End data
 
-    return data.results;
+    console.log(`Ryan Here: searchMovies \n `, { data });
+
+    return data;
   } catch (error) {
     console.error(error);
     return [];

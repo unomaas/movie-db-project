@@ -20,11 +20,11 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center w-screen max-w-lg mx-auto mt-10"
+      className="mx-auto mt-10 flex w-screen max-w-lg items-center"
     >
       <Input
         type="text"
-        className="w-full h-10 px-4 py-2 text-lg text-gray-700 bg-gray-200 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+        className="h-10 w-full rounded-md border border-transparent bg-gray-200 px-4 py-2 text-lg text-gray-700 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600"
         placeholder="Search for a movie"
         value={query}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>

@@ -14,7 +14,7 @@ export default function IndexPage() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <main className="container flex flex-col items-center justify-center px-4 py-10 mx-auto">
+      <main className="container mx-auto flex flex-col items-center justify-center px-4 py-10">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Movie Database
         </h1>
